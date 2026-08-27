@@ -243,3 +243,23 @@ footer {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Adaugă o umbră mai intensă în Dark Mode */
         border-color: var(--accent); /* Accentuează bordura cu culoarea ta principală */
     }
+/* Adaptare pentru ecrane mici (Telefoane) */
+@media (max-width: 600px) {
+  .contact-links {
+    display: flex;
+    flex-direction: column; /* Așază butoanele unul sub altul */
+    align-items: center;
+    gap: 12px; /* Spațiu între butoane */
+    width: 100%;
+  }
+
+  .contact-links .btn {
+    width: 100%; /* Extinde butoanele pe toată lățimea disponibilă */
+    max-width: 320px;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal; /* Permite textului să treacă pe rândul următor dacă e prea lung */
+    word-break: break-word; /* Previne depășirea ecranului pentru e-mailuri lungi */
+    padding: 12px 16px;
+  }
+}
