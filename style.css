@@ -263,3 +263,63 @@ footer {
     padding: 12px 16px;
   }
 }
+/* Stil de bază pentru butonul burger (ascuns pe desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Modificări specifice pentru Mobil (Telefoane și Tablete mici) */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  /* Afișează butonul burger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ascunde meniul orizontal pe mobil */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0f172a; /* Culoarea de fundal a navbar-ului tău */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Clasa activată din JavaScript când se dă tap pe burger */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 12px 0;
+  }
+}
